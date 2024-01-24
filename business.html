@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business</title>
+    <!--引入bootstrap.css-->
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+        /* 建立整個頁面的基本大小 */
+        body {
+            width: 1920px;
+            height: 1080px;
+        }
+
+        /* 設定header區的高度 */
+        header {
+            width: 1920px;
+            height: 100px;
+        }
+
+        /* 設定main區的高度 */
+        main {
+            width: 1920px;
+            height: 880px;
+        }
+
+        /* 設定footer區的高度 */
+        footer {
+            width: 1920px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--使用bootstrap設定header區的底色為黃色，並設定header區內的元件都以置中方式安排-->
+    <header class="bg-warning d-flex justify-content-around align-items-center">
+        <!--設定logo區的寬度為25%-->
+        <div class="w-25">logo</div>
+        <!--設定menu區的寬度為25%，並設定menu區內的元件都以flex方式安排-->
+        <div class="w-25 d-flex">
+            <!--設定menu區內的a元件寬度為25%，型式為黃色按鈕-->
+            <a class="w-25 btn btn-warning" href="index.html">Home</a>
+            <a class="w-25 btn btn-warning" href="news.html">News</a>
+            <a class="w-25 btn btn-warning" href="business.html">Business</a>
+            <a class="w-25 btn btn-warning" href="tickets.html">Tickets</a>
+        </div>
+    </header>
+    <!--設定main區的內距空間為p-5的距離-->
+    <main class="p-5">
+        <div class="m-auto w-75 d-flex justify-content-around ">
+            <div class="card ">
+                <img src="./img/discover.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <button class="btn btn-dark">test</button>
+                    <button>test</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img/discover.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img/discover.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="row mx-auto w-75 border border-dark mt-3">
+        <img src="./img/news-01.png" style="width: 100%;height: 400px;" class="col-7 p-0" alt="">
+        <div class="col-5 card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    <div class="row mx-auto w-75 border border-dark mt-3">
+        <div class="col-5 card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+        <img src="./img/news-01.png" style="width: 100%;height: 400px;" class="col-7 p-0" alt="">
+    </div> -->
+        <div class="w-75 mx-auto">
+            <p>
+                <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button">
+                    Link with href
+                </a>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample">
+                    Button with data-target
+                </button>
+            </p>
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                    Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--設定footer區的底色為藍色，並設定footer區內的元件都以置中方式安排
+    另外設定footer區內的元件會自動斷行-->
+    <footer class="bg-info d-flex flex-wrap align-items-center">
+        <!--社群媒體圖示區-->
+        <div class="text-center w-100">
+            <!--設定社群媒體的圖示寬度為35px-->
+            <img src="./img/icon_facebook.png" style="width:35px;">
+            <img src="./img/icon_instagram.png" style="width:35px;">
+            <img src="./img/icon_twtter.png" style="width:35px;">
+            <img src="./img/icon_youtube.png" style="width:35px;">
+        </div>
+        <!--設定尾註區的寬度為100%，並設定尾註區的文字顏色為白色-->
+        <div class="text-center text-white w-100">Copyright &copy; 2024 FIBEX All Rights Reserved</div>
+    </footer>
+    <!--必須先引入jquery.js-->
+    <script src="jquery.js"></script>
+    <!--再接著引入bootstrap.js-->
+    <script src="bootstrap.js"></script>
+</body>
+
+</html>

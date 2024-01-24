@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <!--引入bootstrap.css-->
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+        /* 建立整個頁面的基本大小 */
+        body{
+            width:1920px;
+            height:1080px;
+        }
+        /* 設定header區的高度 */
+        header{
+            width:1920px;
+            height:100px;
+        }
+        /* 設定main區的高度 */
+        main{
+            width:1920px;
+            height:880px;
+        }
+        /* 設定footer區的高度 */
+        footer{
+            width:1920px;
+            height:100px;
+        }
+        #jp_new{
+            transition: .3s;
+        }
+        #jp_new:hover{
+            height: 100% !important;
+        }
+        
+        .news_card{ 
+            /* 套用到效果區 */
+            transition: 1s;
+        }
+        .news_card:hover{
+            /* 效果區hover之後的效果 */
+            text-shadow: #FC0 1px 0 10px; /* 字體加上陰影效果*/
+            height: 100% !important; /* 改變整個區塊長度 */
+        }
+    </style>
+</head>
+<body>
+  <!--使用bootstrap設定header區的底色為黃色，並設定header區內的元件都以置中方式安排-->
+  <header class="bg-warning d-flex justify-content-around align-items-center">
+    <!--設定logo區的寬度為25%-->
+    <div class="w-25">logo</div>
+    <!--設定menu區的寬度為25%，並設定menu區內的元件都以flex方式安排-->
+    <div class="w-25 d-flex">
+        <!--設定menu區內的a元件寬度為25%，型式為黃色按鈕-->
+        <a class="w-25 btn btn-warning" href="index.html">Home</a>
+        <a class="w-25 btn btn-warning" href="news.html">News</a>
+        <a class="w-25 btn btn-warning" href="business.html">Business</a>
+        <a class="w-25 btn btn-warning" href="tickets.html">Tickets</a>
+    </div>
+</header>
+<!--設定main區的內距空間為p-5的距離-->  
+<main class="p-5">
+    <!--設定新聞區以flex方式排版，並設定新聞區內的元件都置中-->
+    <div class="d-flex justify-content-center align-items-center">
+        <!--地圖區，設定寬高為500px，並且以relative方式定位-->
+        <div class="m-1 position-relative" style="width:500px;height:500px">
+            <!--設定地圖區的背景圖片為world-map.png，並且圖片的長寬會塞滿整個地圖區-->
+            <img src="./img/world-map.png" alt="" style="width:100%;height:100%">
+
+            <!--設定地圖區內的按鈕元件為淺灰色，以absolute方式定位，並且建立一個local的樣式名-->
+            <div class="local btn btn-light position-absolute" style="top:126px;left:348px">
+                <img src="./img/star.png" alt="">
+                japanese
+            </div>
+            <div class="local btn btn-light position-absolute" style="top:200px;left:150px">
+                <img src="./img/star.png" alt="">
+                france
+            </div>
+            <div class="local btn btn-light position-absolute" style="top:300px;left:200px">
+                <img src="./img/star.png" alt="">
+                taiwan
+            </div>
+            <div class="local btn btn-light position-absolute" style="top:400px;left:300px">
+                <img src="./img/star.png" alt="">
+                amarican
+            </div>
+            <div class="local btn btn-light position-absolute" style="top:300px;left:400px">
+                <img src="./img/star.png" alt="">
+                british
+            </div>
+        </div>
+        <!--新聞資訊區-->
+        <div class="m-1" style="width:500px;height:500px">
+            <!--建立新聞元件，建立一個news的樣式名，並且以relative方式定位-->
+            <div class="news position-relative">
+                <img src="./img/news-01.png" style="width:100%;height:100%">
+                <!--建立新聞元件的內容，以absolute方式定位，並且設定有一個半透明的文字區-->
+                <div class="position-absolute news_card w-100 p-3" style="bottom:0;height:180px;background-color:rgba(255,255,255,0.5)">
+                    <h3>japanese</h3>        
+                    dfdasfasfasf
+                </div>
+            </div>
+            <div class="news position-relative" style="display:none">
+                <img src="./img/news-02.png" style="width:100%;height:100%">
+                <div class="position-absolute w-100 p-3 news_card" style="bottom:0;height:180px;background-color:rgba(255,255,255,0.5)">
+                    <h3>france</h3>    
+                    dfdasfasfasf
+                </div>
+            </div>
+            <div class="news position-relative" style="display:none">
+                <img src="./img/news-03.png" style="width:100%;height:100%">
+                <div class="position-absolute w-100 p-3 news_card" style="bottom:0;height:180px;background-color:rgba(255,255,255,0.5)">
+                    <h3>taiwan</h3>       
+                    dfdasfasfasf
+                </div>
+            </div>
+            <div class="news position-relative" style="display:none">
+                <img src="./img/news-04.png" style="width:100%;height:100%">
+                <div class="position-absolute w-100 p-3 news_card" style="bottom:0;height:180px;background-color:rgba(255,255,255,0.5)">
+                    <h3>amarican</h3>        
+                    dfdasfasfasf
+                </div>
+            </div>
+            <div class="news position-relative" style="display:none">
+                <img src="./img/news-05.png" style="width:100%;height:100%">
+                <div class="position-absolute w-100 p-3 news_card" style="bottom:0;height:180px;background-color:rgba(255,255,255,0.5)">
+                    <h3>british</h3>        
+                    dfdasfasfasf
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+<!--設定footer區的底色為藍色，並設定footer區內的元件都以置中方式安排
+    另外設定footer區內的元件會自動斷行-->
+    <footer class="bg-info d-flex flex-wrap align-items-center">
+        <!--社群媒體圖示區-->
+        <div class="text-center w-100">
+                                  <!--設定社群媒體的圖示寬度為35px-->
+            <img src="./img/icon_facebook.png" style="width:35px;">
+            <img src="./img/icon_instagram.png"  style="width:35px;">
+            <img src="./img/icon_twtter.png"  style="width:35px;">
+            <img src="./img/icon_youtube.png"  style="width:35px;">
+        </div>
+            <!--設定尾註區的寬度為100%，並設定尾註區的文字顏色為白色-->
+        <div class="text-center text-white w-100">Copyright &copy; 2024 FIBEX All Rights Reserved</div>
+    </footer>
+    <!--必須先引入jquery.js-->
+    <script src="jquery.js"></script>
+    <!--再接著引入bootstrap.js-->
+    <script src="bootstrap.js"></script>
+</body>
+</html>
+<script>
+//設定地圖區的按鈕元件的滑鼠點擊事件
+$(".local").on('click',function(){
+    //取得按鈕元件的索引值
+    let num=$(this).index('.local');
+    //將新聞區的所有元件都隱藏
+    $(".news").hide()
+    //將新聞區的第num個元件顯示
+    $(".news").eq(num).show();
+})
+
+</script>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tickets</title>
+    <!--引入bootstrap.css-->
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+        /* 建立整個頁面的基本大小 */
+        body{
+            width:1920px;
+            height:1080px;
+        }
+        /* 設定header區的高度 */
+        header{
+            width:1920px;
+            height:100px;
+        }
+        /* 設定main區的高度 */
+        main{
+            width:1920px;
+            height:880px;
+        }
+        /* 設定footer區的高度 */
+        footer{
+            width:1920px;
+            height:100px;
+        }
+        #ver_number{
+            background-color: chocolate;
+            color: white;
+            user-select: none;
+            width: 100px;
+            border-radius: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+  <!--使用bootstrap設定header區的底色為黃色，並設定header區內的元件都以置中方式安排-->
+  <header class="bg-warning d-flex justify-content-around align-items-center">
+    <!--設定logo區的寬度為25%-->
+    <div class="w-25">logo</div>
+    <!--設定menu區的寬度為25%，並設定menu區內的元件都以flex方式安排-->
+    <div class="w-25 d-flex">
+        <!--設定menu區內的a元件寬度為25%，型式為黃色按鈕-->
+        <a class="w-25 btn btn-warning" href="index.html">Home</a>
+        <a class="w-25 btn btn-warning" href="news.html">News</a>
+        <a class="w-25 btn btn-warning" href="business.html">Business</a>
+        <a class="w-25 btn btn-warning" href="tickets.html">Tickets</a>
+    </div>
+</header>
+<!--設定main區的內距空間為p-5的距離-->  
+<main class="p-5 mx-auto w-75">
+    <form action="./backend.php" method="post">
+        <div class="form-group">
+          <label for="first_name">First name(名字)</label>
+          <input type="text" class="form-control" name="first_name" id="first_name">
+        </div>
+        <div class="form-group">
+            <label for="last_name">Last name(姓氏)</label>
+            <input type="text" class="form-control" name="last_name" id="last_name">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone(手機號碼)</label>
+            <input type="tel" class="form-control" name="phone" id="phone">
+        </div>
+        <div class="form-group">
+          <label for="password">Password(會員密碼)</label>
+          <input type="password" class="form-control" name="password" id="password">
+        </div>
+        <p id="ver_number"></p>
+        <div class="form-group">
+            <label for="ver">Verification(數字驗證)</label>
+            <input type="text" class="form-control" name="ver" id="ver">
+            <input type="hidden" id="answer" name="answer">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</main>
+<!--設定footer區的底色為藍色，並設定footer區內的元件都以置中方式安排
+    另外設定footer區內的元件會自動斷行-->
+    <footer class="bg-info d-flex flex-wrap align-items-center">
+        <!--社群媒體圖示區-->
+        <div class="text-center w-100">
+                                  <!--設定社群媒體的圖示寬度為35px-->
+            <img src="./img/icon_facebook.png" style="width:35px;">
+            <img src="./img/icon_instagram.png"  style="width:35px;">
+            <img src="./img/icon_twtter.png"  style="width:35px;">
+            <img src="./img/icon_youtube.png"  style="width:35px;">
+        </div>
+        <input type="text" value="112" name="" id="test">
+       
+            <!--設定尾註區的寬度為100%，並設定尾註區的文字顏色為白色-->
+        <div class="text-center text-white w-100">Copyright &copy; 2024 FIBEX All Rights Reserved</div>
+    </footer>
+    <!--必須先引入jquery.js-->
+    <script src="jquery.js"></script>
+    <!--再接著引入bootstrap.js-->
+    <script src="bootstrap.js"></script>
+    <script>
+        let ver_number = document.getElementById("ver_number");
+        let answer = document.getElementById("answer");
+        
+        // floor 無條件捨去 random產生一個小於1的數字
+        let ez_random = Math.floor(Math.random() * 10000); // 0~~9999;
+        let random = Math.floor(Math.random() * 10).toString() + Math.floor(Math.random() * 10).toString() + Math.floor(Math.random() * 10).toString()+ Math.floor(Math.random() * 10).toString();
+        let hi_random = Math.floor(Math.random() * 10000).toString().padStart(4,"0");
+        console.log(ez_random);
+        console.log(random);
+        console.log(hi_random);
+        ver_number.innerText = ez_random; // 放置驗證碼到顯示的位置
+        answer.value = ez_random; // 放置驗證碼到input欄位
+    </script>
+</body>
+</html>
